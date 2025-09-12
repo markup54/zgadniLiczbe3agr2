@@ -86,5 +86,20 @@ public class Main {
                 System.out.println("Wpisałeś za mało");
             }
         }
+        System.out.println("Uwaga losowanie nowej liczby");
+        Random random = new Random();
+        int liczbDoZgadywania2 = random.nextInt(1,101);
+        System.out.println("Podaj liczbę");
+        liczbaWpisana = scanner.nextInt();
+        while (liczbaWpisana!= liczbDoZgadywania2){
+            System.out.println("Podaj liczbę");
+            liczbaWpisana = scanner.nextInt();
+            if(liczbaWpisana>liczbDoZgadywania2){
+                System.out.println("Wpisałeś za dużo");
+            }
+            else {
+                System.out.println("Wpisałeś za mało");
+            }
+        }
     }
 }
