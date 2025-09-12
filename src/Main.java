@@ -71,5 +71,20 @@ public class Main {
                     default -> "Może innym razem";
                 }
         );
+        System.out.println("Zgadywanie 10 razy");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Podaj liczbę");
+            liczbaWpisana = scanner.nextInt();
+            if(liczbaWpisana == liczbaDoZgadywania){
+                System.out.println("Brawo zgadłeś za "+(i+1)+"razem");
+                break;
+            }
+            else if(liczbaWpisana>liczbaDoZgadywania){
+                System.out.println("Wpisałeś za dużo");
+            }
+            else {
+                System.out.println("Wpisałeś za mało");
+            }
+        }
     }
 }
