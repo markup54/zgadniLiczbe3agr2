@@ -101,5 +101,63 @@ public class Main {
                 System.out.println("Wpisałeś za mało");
             }
         }
+        //wypisz na ekranie wszystkie liczby dwucyfrowe parzyste
+        //10, 12, 14, ..... 98
+        System.out.println("Liczby dwucyfrowe parzyste");
+        for (int i = 10; i <100 ; i = i+2) {
+            System.out.print(i+", ");
+        }
+
+
+        //wczytaj dwie liczby z klawiatury
+        //wypisz wszystkie od pierwsze do drugiej
+        Scanner klawiatura = new Scanner(System.in);
+        System.out.println("Podaj pierwszą liczbę");
+        int pierwszaLiczba = klawiatura.nextInt();
+        System.out.println("Podaj drugą liczbę");
+        int drugaLiczba = klawiatura.nextInt();
+        if(pierwszaLiczba<drugaLiczba){
+            for (int i = pierwszaLiczba; i <=drugaLiczba ; i++) {
+                System.out.println(i+", ");
+            }
+        }
+        else {
+            for (int i = pierwszaLiczba;i>=drugaLiczba ; i++) {
+                System.out.println(i+", ");
+            }
+        }
+        //wczytuj liczby z klawiatury tak długo aż wczytasz 0
+        int liczbaWczytywana =-1;
+        while (liczbaWczytywana!=0){
+            System.out.println("Podaj liczbe 0");
+            liczbaWczytywana = klawiatura.nextInt();
+        }
+        System.out.println("To samo drugim sposobem");
+
+        do{
+            System.out.println("Podaj liczbe 0");
+            liczbaWczytywana = klawiatura.nextInt();
+        }while (liczbaWczytywana!=0);
+
+        //wczytaj 10 liczb i oblicz ich sumę
+        Random random1 = new Random();
+        int liczbaWylosowana;
+        int sumaLosowych = 0;
+        System.out.println("Wylosowane liczby");
+        for (int i = 0; i < 10; i++) {
+            liczbaWylosowana = random.nextInt(1,101);
+            System.out.println(liczbaWylosowana);
+            sumaLosowych = sumaLosowych +liczbaWylosowana;
+        }
+        System.out.println("Suma wylosowanych liczb wynosi:"+sumaLosowych);
+
+        //losuj liczbę z zakresu 1,100 tak długo aż wylosuj większą od 50
+        System.out.println("Losujemy liczby do wylosowania większej od 50");
+
+        do {
+            liczbaWylosowana = random1.nextInt(1,101);
+            System.out.println(liczbaWylosowana);
+        }while (liczbaWylosowana<50);
+
     }
 }
